@@ -105,11 +105,10 @@ public class AstronomicalObject : MonoBehaviour
     }
 
     public virtual void OnLeftClick(){
-        Debug.Log("Pressed Left click.");
         m_GameController.OnSelect(this);
     }
 
-    public virtual void OnRightClick() { Debug.Log("Pressed Right click."); }
+    public virtual void OnRightClick() { }
 
 
     public virtual void DoFixedUpdate(){}
