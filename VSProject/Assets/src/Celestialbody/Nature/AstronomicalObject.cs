@@ -45,16 +45,18 @@ public class AstronomicalObject : MonoBehaviour
         DoFixedUpdate();
     }
 
-    public virtual void Update()
+    void Update()
     {
+        DoUpdate();
     }
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
-        {
-            m_GameController.OnSelect(this);
-        }
+            OnLeftClick();
+        else if (Input.GetMouseButtonDown(1))
+            OnRightClick();
+            
     }
 
     void Revolution()
@@ -102,6 +104,15 @@ public class AstronomicalObject : MonoBehaviour
         }
     }
 
+    public virtual void OnLeftClick(){
+        Debug.Log("Pressed Left click.");
+        m_GameController.OnSelect(this);
+    }
+
+    public virtual void OnRightClick() { Debug.Log("Pressed Right click."); }
+
+
     public virtual void DoFixedUpdate(){}
+    public virtual void DoUpdate() { }
 
 }
