@@ -13,4 +13,10 @@ public class Fleet : AstronomicalObject
 	public override void DoUpdate () {
         base.DoUpdate();
 	}
+
+    public override void DoRightClick()
+    {
+        base.DoRightClick();
+
+    }
 }

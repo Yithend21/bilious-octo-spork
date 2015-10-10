@@ -53,9 +53,9 @@ public class AstronomicalObject : MonoBehaviour
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
-            OnLeftClick();
+            DoLeftClick();
         else if (Input.GetMouseButtonDown(1))
-            OnRightClick();
+            DoRightClick();
             
     }
 
@@ -104,11 +104,11 @@ public class AstronomicalObject : MonoBehaviour
         }
     }
 
-    public virtual void OnLeftClick(){
+    public virtual void DoLeftClick(){
         m_GameController.OnSelect(this);
     }
 
-    public virtual void OnRightClick() { }
+    public virtual void DoRightClick() { }
 
 
     public virtual void DoFixedUpdate(){}
