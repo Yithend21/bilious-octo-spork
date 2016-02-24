@@ -17,6 +17,5 @@ public class Fleet : AstronomicalObject
     public override void DoRightClick()
     {
         base.DoRightClick();
-
     }
 }

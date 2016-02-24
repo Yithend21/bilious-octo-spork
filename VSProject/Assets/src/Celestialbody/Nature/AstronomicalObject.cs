@@ -108,7 +108,9 @@ public class AstronomicalObject : MonoBehaviour
         m_GameController.OnSelect(this);
     }
 
-    public virtual void DoRightClick() { }
+    public virtual void DoRightClick() {
+        //m_GameController.OnSelect(this);
+    }
 
 
     public virtual void DoFixedUpdate(){}

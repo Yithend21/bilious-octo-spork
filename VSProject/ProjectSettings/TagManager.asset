@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InspectorPannel
   - InformationPannel
+  - RightClickCanvas
   layers:
   - Default
   - TransparentFX
